@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>footer</title>
-  <!-- bootstrap.css -->
-  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
-    <!-- 自定义样式 -->
-    <link rel="stylesheet" href="./dist/css/index.min.css">
-    <!-- jquery.js -->
-    <script src="./lib/jqueryTemplate/jquery.js"></script>
-    <!-- bootstrap.js -->
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>    
 </head>
 <body>
-
-
  <!-- footer -->
  <div class="contain-fulid" id="footer">
  <div class="container">
@@ -39,7 +29,6 @@
     </div>
   </div>
  </div>
-</div>
-    
+</div>   
 </body>
 </html>

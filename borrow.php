@@ -74,5 +74,6 @@
  <script src="./lib/jqueryTemplate/jquery.js"></script>
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./src/js/index.js"></script>
 </body>
 </html>
