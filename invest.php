@@ -34,10 +34,10 @@
     <thead>
       <tr>
         <td>借款人</td>
-        <td>借款标题</td>
+        <td class="hideTitle">借款标题</td>
         <td>年利</td>
         <td>金额 </td>
-        <td>还款方式</td>
+        <td class="hideTitle">还款方式</td>
         <td>进度</td>
         <td>操作</td>
      </tr>  
@@ -45,10 +45,10 @@
   <tbody>
       <tr>
         <td> zs</td>
-        <td>给我2000度过难关</td>
+        <td class="hideTitle">给我2000度过难关</td>
         <td>10.00%</td>
         <td>2,000.00 </td>
-        <td>	按月分期还款</td>
+        <td class="hideTitle">按月分期还款</td>
         <td>78.00%</td>
         <td><button type="button" class="btn btn-danger">查看</button></td>
      </tr>    
