@@ -1,0 +1,50 @@
+@colorwhite:#fff;
+@colorblue:#00a8ff;
+*{
+    margin:0;
+    padding:0;
+}
+.navbar{
+    margin-bottom:0px;
+}
+.navbar-inverse .navbar-brand{
+    color:@colorwhite;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:@colorwhite;
+    &:hover{
+       color:@colorblue;
+       text-decoration: underline;
+    }
+}
+.navbar-inverse .navbar-nav>.active>a:hover{
+    color:@colorblue;
+}
+
+.navbar-inverse{
+    .navbar-brand{
+        color: @colorwhite;
+        font-size: 24px;
+        font-style: italic;
+
+        span{
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.navbar-default .navbar-nav > li > a{
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+
+    &:hover{
+        background-color: #efeeee;
+        color: @colorblue;
+    }
+}
+.tooltip img{
+    width:100px;
+    height:100px;
+}

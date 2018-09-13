@@ -14,15 +14,15 @@
 <body>
     <!-- header -->
      <?php 
-     include_once("./header.php")
+     include_once("./header.php");
      ?>
 <div class="container">
     <h4>投资列表</h4>
     <div class="row">
-        <div class="col-sm-1" id="state">
+        <div class="col-sm-1 col-xs-3" id="state">
             <span>标的状态</span>
          </div>
-    <div class="col-sm-3">
+    <div class="col-sm-10 col-xs-9">
         <ul class="nav nav-pills" id="choose">
             <li role="presentation" class="active"><a href="#">全部</a></li>
             <li role="presentation"><a href="#">招标中</a></li>
@@ -64,5 +64,7 @@
  <script src="./lib/jqueryTemplate/jquery.js"></script>
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="./src/js/index.js"></script>
 </body>
 </html>

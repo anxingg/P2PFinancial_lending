@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
-  
     <!-- bootstrap.css -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 自定义样式 -->
     <link rel="stylesheet" href="./dist/css/index.min.css">
-
 </head>
 <body>
 <!--header -->
@@ -188,10 +186,12 @@ include_once("./header.php");
 include_once("./footer.php");
 ?>
 
-  <!-- jquery.js -->
-  <script src="./lib/jqueryTemplate/jquery.js"></script>
-  <!-- bootstrap.js -->
-  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
- <script src="./src/js/index.js"></script>
+ <!-- jquery.js -->
+ <script src="./lib/jqueryTemplate/jquery.js"></script>
+<!-- bootstrap.js -->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./src/js/index.js"></script>
+<script>
+    </script>
 </body>
 </html>
