@@ -16,89 +16,109 @@
     <?php
        require_once("header.php");
     ?>
-
     <!-- 左侧导航 -->
-    <div class="container" id="personal">
+     
+      <div class="container" id="personal">
         <div class="row">
+          
           <div class="col-sm-3 col-xs-12">
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-             <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                       投资项目
-                         </a>
-                    </h4>
-                </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">投资项目</div>
-    </div>
-  </div>
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        借款项目
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-       <p><a href="#">借款项目</a></p>
-       <p><a href="#">还款明细</a></p>
+    <?php 
+     require_once("personalNav.php");
+    ?>
       </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-         我的账户</a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        <p><a href="#">账户信息</a></p>
-        <p><a href="#">实名认证</a></p>
-        <p><a href="#">银行卡管理</a></p>
-        <p><a href="#">登录记录</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingFour">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
-                       资产详情
-                         </a>
-                    </h4>
-                </div>
-            <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
-        <div class="panel-body">
-        <p><a href="#">账户流水</a></p>
-        <p><a href="#">充值明细</a></p>
-        <p><a href="#">提现记录</a></p>
-        <p><a href="#">收款明细</a></p>
-      </div>
-    </div>
-  </div>
 </div>
 </div>
-
     <!-- 右侧内容 -->
  <div class="col-sm-9 col-xs-12">
  <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">
-        <div class="personTitle">
-        <p>昵 称：源代码教育</p>
-        <p>用户名：小强</p>
-        <p>最后登录时间：2016-10-25 15:30:10</p>
-        </div>
+    <h3 class="panel-title clearfix">
+    个人资料
     </h3>
   </div>
   <div class="panel-body">
-    Panel content
+     <!-- 表单 -->
+    
+     <form class="form-horizontal">
+            <!-- 个人以填信息 -->
+            <div class="form-group">
+                <label for="username" class="col-sm-3 control-label">用户名</label>
+                <div class="col-sm-9">
+                <label for="name" class="col-sm-3 TL control-label ">xiaoq</label>
+                </div>
+            </div>
+             <!-- 个人以填信息 -->
+             <div class="form-group">
+                <label for="realname" class="col-sm-3  control-label">真实姓名</label>
+                <div class="col-sm-9">
+                <label for="Fname" class="col-sm-3 TL control-label ">小强</label>
+                </div>
+            </div>
+             <!-- 个人以填信息 -->
+             <div class="form-group">
+                <label for="identify" class="col-sm-3 control-label">证件号码</label>
+                <div class="col-sm-9">
+                <label for="idnum" class="col-sm-3 control-label">512************4646</label>
+                </div>
+            </div>
+
+            <!-- 手机号码 -->
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">手机号码</label>
+                <div class="col-sm-9">
+                <input type="text" class="form-control" name="phone" placeholder="输入你的手机号码">
+                </div>
+            </div>
+            <!-- 联系电话 -->
+            <div class="form-group">
+                <label for="telNum" class="col-sm-3 control-label">联系电话</label>
+                <div class="col-sm-9">
+                <input type="text" class="form-control" name="telNum" placeholder="联系电话">
+                </div>
+            </div>
+            <!-- 个人学历 -->
+            <div class="form-group">
+                <label for="Education" class="col-sm-3 control-label" >个人学历</label>
+                <div class="col-sm-9">
+                <select class="form-control "  name="Education">
+                    <option>初中</option>
+                    <option>中专/高中</option>
+                    <option>专科</option>
+                    <option>本科</option>
+                    <option>硕士研究生</option>
+                    <option>博士研究生</option>
+                </select>
+                </div>
+            </div>
+             <!-- 个人收入 -->
+             <div class="form-group">
+                <label for="income" class="col-sm-3 control-label">个人收入</label>
+                <div class="col-sm-9">
+                <select class="form-control">
+                    <option>1000元以下</option>
+                    <option>1000元-1999元</option>
+                    <option>2000元-2999元</option>
+                    <option>3000-4999</option>
+                    <option>5000-8999</option>
+                    <option>10000</option>
+                </select>
+                </div>
+            </div>
+             <!-- 联系地址 -->
+             <div class="form-group">
+                <label for="telNum" class="col-sm-3 control-label">联系地址</label>
+                <div class="col-sm-9">
+                <input type="text" class="form-control" name="telNum" placeholder="联系地址">
+                </div>
+            </div>
+            <!-- 登录 -->
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">保存数据</button>
+                </div>
+            </div>
+    </form>
+
   </div>
 </div>
  </div>
