@@ -21,6 +21,7 @@ var del = require("del");
 var concat=require("gulp-concat");
 //图片压缩
 var imagemin=require("gulp-imagemin");
+const babel = require('gulp-babel');
 
 
 //配置解析less文件的任务
@@ -42,13 +43,15 @@ gulp.task('less', function () {
 //js
 gulp.task("uglify", () => {
   return gulp.src("./src/js/*.js")
-    .pipe(uglify())
-    .pipe(gulp.dest("./dist/js"))
-    .pipe(rename(function (path) { //修改文件名称
-      //path.dirname += "/ciao";
-      path.basename += ".min";
-      //path.extname = ".md";
+//支持es6
+    .pipe(babel({
+      presets: ['@babel/env']
     }))
+    .pipe(uglify())
+    .pipe(rename(function (path) { //修改文件名称
+      path.basename += ".min";
+    }))
+    .pipe(gulp.dest('./dist/js'))
     .pipe(livereload());
 })
 

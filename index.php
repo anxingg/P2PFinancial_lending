@@ -190,7 +190,7 @@ include_once("./footer.php");
  <script src="./lib/jqueryTemplate/jquery.js"></script>
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="./src/js/index.js"></script>
+<script src="./dist/js/index.min.js"></script>
 <script>
     </script>
 </body>

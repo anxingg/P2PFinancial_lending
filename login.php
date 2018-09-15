@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>login</title>
     <!-- bootstrap.css -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 自定义样式 -->
@@ -37,7 +37,7 @@
       <div class="panel-body">
      <!-- 表单 -->
     <h2>请输入用户名和密码</h2>
-    <form class="form-horizontal" id="loginCheck" action="index.php" method="post">
+    <form class="form-horizontal" id="loginCheck"  method="post">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">用&nbsp;&nbsp;户&nbsp;名</label>
     <div class="col-sm-9">
@@ -68,6 +68,26 @@
 </div>
 
 </div>
+
+<!-- 蒙层 -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="loginModalTitle">TITLE</h4>
+      </div>
+      <div class="loginModalContent">
+       内容
+      </div>
+      <div class="loginModelBody modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- 底部导航 -->
   <?php
     include_once("./footer.php");
@@ -79,6 +99,6 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>  
      <!-- 验证js -->
      <script src="./lib/bootstrapValidator/js/bootstrapValidator.js"></script>  
-    <script src="./src/js/loginCheck.js"></script>
+    <script src="./dist/js/loginCheck.min.js"></script>
 </body>
 </html>

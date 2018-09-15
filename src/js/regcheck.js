@@ -53,7 +53,7 @@ $(function(){
                     }
                 }
             },
-            tel: {
+            mobile: {
                 validators: {
                     notEmpty: {
                         message: '电话不能为空'
@@ -66,15 +66,20 @@ $(function(){
             },
         }
     })
-    .on('./index.php', function(e) {
+    .on('success.form.bv', function(e) {
         e.preventDefault();
 
         var $form = $(e.target);
-
+        //获取验证实例
         var bv = $form.data('bootstrapValidator');
-
-        $.post($form.attr('action'), $form.serialize(), function(result) {
-            console.log(result);
-        }, 'json');
+       
+        var URL="./api/userAdd.php";
+        var data= $form.serialize();
+       
+       //使用ajax提交表单数据
+       $.post(URL, data ,function(result) {
+            alert(result.msg);
+            location.href="./login.php";
+        }, 'json'); 
     });
 })

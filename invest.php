@@ -23,11 +23,11 @@
             <span>标的状态</span>
          </div>
     <div class="col-sm-10 col-xs-9">
-        <ul class="nav nav-pills" id="choose">
-            <li role="presentation" class="active"><a href="#">全部</a></li>
-            <li role="presentation"><a href="#">招标中</a></li>
-            <li role="presentation"><a href="#">还款中</a></li>
-        </ul>
+    <div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-info">全部</button>
+  <button type="button" class="btn btn-default">招标中</button>
+  <button type="button" class="btn btn-warning">还款中</button>
+</div>
     </div>
 </div>
   <table class="table  table-hover ">
@@ -65,6 +65,6 @@
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="./src/js/index.js"></script>
+<script src="./dist/js/index.min.js"></script>
 </body>
 </html>

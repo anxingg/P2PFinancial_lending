@@ -19,25 +19,25 @@
                          </a>
                     </h4>
                 </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body"><a href="#">投资项目</a></div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body"><a href="#">投资项目</a></div>
     </div>
   </div>
   <!-- 借款项目 -->
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        借款项目
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-       <p><a href="#">借款项目</a></p>
-       <p><a href="#">还款明细</a></p>
-      </div>
-    </div>
+          <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          借款项目
+          </a>
+         </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+          <p><a href="#">借款项目</a></p>
+          <p><a href="#">还款明细</a></p>
+          </div>
+        </div>
   </div>
   <!-- 我的账户 -->
   <div class="panel panel-default">
