@@ -14,6 +14,7 @@
 <!--header -->
 <?php 
 include_once("./header.php");
+include_once("./menuNav.php");
 ?>
 <!-- 轮播 -->
 <div class="container" >

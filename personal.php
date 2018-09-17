@@ -9,27 +9,36 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/personal.min.css">
+      <!-- 引入jquery -->
+      <script src="./lib/jqueryTemplate/jquery.js"></script>
+      <!--获取登录用户是否登录-->
+      <script src="./dist/js/loginState.min.js"></script>
    
 </head>
 <body>
     <!-- 引入头部信息 -->
-    <?php
-       require_once("header.php");
+    <?php 
+    require_once("./header.php");
+    require_once("./menuNav.php");
     ?>
     <!-- 左侧导航 -->
      
       <div class="container" id="personal">
-        <div class="row">
+        <div class="row row-offcanvas row-offcanvas-left">
           
-          <div class="col-sm-3 col-xs-12">
-    <?php 
-     require_once("personalNav.php");
-    ?>
+        <div class="col-sm-3 col-xs-6 sidebar-offcanvas" id="sidebar">
+            <?php 
+            require_once("personalNav.php");
+            ?>
       </div>
 </div>
 </div>
     <!-- 右侧内容 -->
  <div class="col-sm-9 col-xs-12">
+    <p class="pull-left visible-xs">
+        <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas"><span class="glyphicon glyphicon-pencil"></span></button>
+    </p>
+
  <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title clearfix">
@@ -44,21 +53,23 @@
             <div class="form-group">
                 <label for="username" class="col-sm-3 control-label">用户名</label>
                 <div class="col-sm-9">
-                <label for="name" class="col-sm-3 TL control-label ">xiaoq</label>
+                <label for="name" class="col-sm-3 TL control-label username">xiaoq</label>
                 </div>
             </div>
              <!-- 个人以填信息 -->
              <div class="form-group">
                 <label for="realname" class="col-sm-3  control-label">真实姓名</label>
                 <div class="col-sm-9">
-                <label for="Fname" class="col-sm-3 TL control-label ">小强</label>
+                <input type="text" class="form-control" name="realName">
+                <!-- <label for="Fname" class="col-sm-3 TL control-label ">小强</label> -->
                 </div>
             </div>
              <!-- 个人以填信息 -->
              <div class="form-group">
                 <label for="identify" class="col-sm-3 control-label">证件号码</label>
                 <div class="col-sm-9">
-                <label for="idnum" class="col-sm-3 control-label">512************4646</label>
+                <input type="text" class="form-control" name="idcard" >
+                <!-- <label for="idnum" class="col-sm-3 control-label">512************4646</label> -->
                 </div>
             </div>
 
@@ -126,18 +137,25 @@
     </div>
 
 
-
-
     <!-- 引入页脚 -->
      <?php
        require_once("footer.php");
     ?>
-
-    <!-- 引入jquery -->
-    <script src="./lib/jqueryTemplate/jquery.js"></script>
-
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+       <!-- 侧拉菜单 -->
+       <script src="dist/js/sidebar.min.js"></script>
+       <script>
+     
+     $(function(){
+       $.get("./api/userState.php",function(data){
+      $(".username").html(data.username);
+     
+       },"json");
+     })
 
+     
+
+   </script>
 </body>
 </html>

@@ -9,17 +9,24 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/realAuth.min.css">
+    <!-- 引入jquery -->
+    <script src="./lib/jqueryTemplate/jquery.js"></script>
+      <!--获取登录用户是否登录-->
+    <script src="./dist/js/loginState.min.js"></script>
+   
    
 </head>
 <body>
     <!-- 引入头部信息 -->
-    <?php
-       require_once("header.php");
-    ?>
+  <?php 
+    include_once("./header.php");
+    include_once("./menuNav.php");
+?>
     <!-- 左侧导航 -->
     <div class="container" id="realAuth">
-        <div class="row"> 
-          <div class="col-sm-3 col-xs-12">
+    <div class="row row-offcanvas row-offcanvas-left">
+          
+          <div class="col-sm-3 col-xs-6 sidebar-offcanvas" id="sidebar">
             <?php 
             require_once("personalNav.php");
             ?>
@@ -28,6 +35,9 @@
     </div>
     <!-- 右侧内容 -->
  <div class="col-sm-9 col-xs-12">
+ <p class="pull-left visible-xs">
+  <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas"><span class="glyphicon glyphicon-pencil"></span></button>
+    </p>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title clearfix">实名认证</h3>
@@ -41,7 +51,7 @@
           <!-- 用户名 -->
           <div class="form-group">
             <label for="Fname" class="col-sm-3 control-label">用户名</label>
-            <div class="col-sm-9">
+            <div class="col-sm-9" id="Fname">
             <label for="Fname" class="col-sm-3 control-label FN">小强</label>
             </div>
           </div>
@@ -99,14 +109,17 @@
             <label for="IDphoto" class="col-sm-3 control-label">身份证照片</label>
             <span class="Tips">请点击“选择图片”,选择证件的正反两面照片。</sapn>
             <div class="col-sm-9 clearfix">
-              <div class="upload pull-left">
-                  <a href="#">上传正面</a>
+              <div class="upload pull-left "id="pic1">
+                  <a href="#">上传正面        
+                   <input class="change" type="file"  id="imagefile1"/>
+                  </a>
+                
               </div>
               
-              <div class="upload pull-left">
-                  <a href="#">上传反面</a>
+              <div class="upload pull-left " id="pic2">
+                  <a href="#">上传反面 <input class="change" type="file" id="imagefile2" /></a>
               </div>
-              <div class="pull-right  temp"><a href="#">查看样板</a></div>
+              <div class="pull-right  temp "><a href="#">查看样板</a></div>
             </div>
           </div>
           <!-- 提交 -->
@@ -124,8 +137,6 @@
 </div>
 
 
-
-
     <!-- 引入页脚 -->
      <?php
        require_once("footer.php");
@@ -136,6 +147,19 @@
 
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+    <!-- 侧拉菜单 -->
+    <script src="dist/js/sidebar.min.js"></script>
+    <script src="./lib/jqueryTemplate/jqueryTmpl.js"></script>
+    <script>
+     //获取用户姓名
+      $(function(){
+        $.get("./api/userState.php",function(data){
+       $(".FN").html(data.username);
+      
+        },"json");
+      })
 
+    </script>
+<script src="./dist/js/showPIC.min.js"></script>
 </body>
 </html>

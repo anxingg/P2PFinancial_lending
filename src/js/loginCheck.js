@@ -61,9 +61,8 @@ $(function(){
             if(result.isSuccess){
                $("#loginModal").modal('show');
                $(".loginModalContent").html(`<span class='glyphicon glyphicon-ok green'></span> ${result.msg},等待<span id
-               ='num'>6</span>秒后将跳转到个人中心....`);
+               ='num'>5</span>秒后将跳转到个人中心....`);
                var num=5;
-
                var timer=setInterval(()=>{
                 num--;
                 $("#num").text(num);

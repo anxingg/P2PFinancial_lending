@@ -13,11 +13,11 @@ $sql="insert into userinfo(username,pwd,mobile,email) values('$username','$pwd',
 $rst=mysqli_query($conn,$sql);
 
 if($rst){
-    $isarr=["isSuccess"=>"true","msg"=>"恭喜你注册成功啦..."];
+    $isarr=["isSuccess"=>true,"msg"=>"恭喜你注册成功啦..."];
     echo json_encode($isarr);  
 }else{
-    $isarr=["isSuccess"=>"false","msg"=>"糟糕你注册未成功..."];
+    $isarr=["isSuccess"=>false,"msg"=>"糟糕你注册未成功..."];
     echo json_encode($isarr);  
 }
-include_once("./release.php");
+require_once("./release.php");
 ?>

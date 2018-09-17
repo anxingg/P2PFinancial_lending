@@ -20,7 +20,7 @@
                     </h4>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-              <div class="panel-body"><a href="#">投资项目</a></div>
+              <div class="panel-body"><li><a href="#">投资项目</a></li></div>
     </div>
   </div>
   <!-- 借款项目 -->
@@ -34,8 +34,8 @@
         </div>
         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="panel-body">
-          <p><a href="#">借款项目</a></p>
-          <p><a href="#">还款明细</a></p>
+          <li><a href="#">借款项目</a></li>
+          <li><a href="#">还款明细</a></li>
           </div>
         </div>
   </div>
@@ -49,10 +49,10 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div class="panel-body">
-        <p><a href="account.php">账户信息</a></p>
-        <p><a href="realAuth.php">实名认证</a></p>
-        <p><a href="#">银行卡管理</a></p>
-        <p><a href="login_list.php">登录记录</a></p>
+        <li><a href="account.php">账户信息</a></li>
+        <li><a href="realAuth.php">实名认证</a></li>
+        <li><a href="#">银行卡管理</a></li>
+        <li><a href="login_list.php">登录记录</a></li>
       </div>
     </div>
   </div>
@@ -66,10 +66,10 @@
                 </div>
             <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
         <div class="panel-body">
-        <p><a href="#">账户流水</a></p>
-        <p><a href="#">充值明细</a></p>
-        <p><a href="#">提现记录</a></p>
-        <p><a href="#">收款明细</a></p>
+        <li><a href="#">账户流水</a></li>
+        <li><a href="#">充值明细</a></li>
+        <li><a href="#">提现记录</a></li>
+        <li><a href="#">收款明细</a></li>
       </div>
     </div>
   </div>
@@ -84,7 +84,7 @@
                 </div>
             <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
         <div class="panel-body">
-        <p><a href="personal.php">个人资料</a></p>
+        <li><a href="personal.php">个人资料</a></li>
        
       </div>
     </div>

@@ -14,7 +14,8 @@
 <body>
     <!-- header -->
      <?php 
-     include_once("./header.php")
+     require_once("./header.php");
+     require_once("./menuNav.php");
      ?>
 <div class="container">
     <div class="row" id="loan">

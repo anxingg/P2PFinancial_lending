@@ -14,9 +14,10 @@
 </head>
 <body>
     <!-- 顶部导航 -->
-    <?php
-    include_once("./loginHeader.php");
-    ?>
+      <?php 
+    include_once("./header.php");
+
+  ?>
     <!-- nav主导航 -->
     <nav class="navbar navbar-default">
     <div class="container">
@@ -95,10 +96,12 @@
 
     <!-- jquery.js -->
     <script src="./lib/jqueryTemplate/jquery.js"></script>
+    <script src="./dist/js/index.min.js"></script>
     <!-- bootstrap.js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script> 
     <!-- 验证js -->
     <script src="./lib/bootstrapValidator/js/bootstrapValidator.js"></script>  
+
     <script src="./dist/js/regcheck.min.js"></script>
 </body>
 </html>

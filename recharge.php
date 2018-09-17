@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="./dist/css/recharge.min.css">
     <!-- 验证样式 -->
     <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.css">
+    <!-- 引入jquery -->
+    <script src="./lib/jqueryTemplate/jquery.js"></script>
+      <!--获取登录用户是否登录-->
+      <script src="./dist/js/loginState.min.js"></script>
+   
 </head>
 <body>
     <!-- 顶部导航 -->

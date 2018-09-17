@@ -13,9 +13,10 @@
 </head>
 <body>
     <!-- header -->
-     <?php 
-     include_once("./header.php");
-     ?>
+    <?php 
+    include_once("./header.php");
+    include_once("./menuNav.php");
+    ?>
 <div class="container">
     <h4>投资列表</h4>
     <div class="row">

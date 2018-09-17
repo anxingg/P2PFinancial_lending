@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/account.min.css">
+   <!-- 引入jquery -->
+   <script src="./lib/jqueryTemplate/jquery.js"></script>
+      <!--获取登录用户是否登录-->
+      <script src="./dist/js/loginState.min.js"></script>
    
 </head>
 <body>
     <!-- 引入头部信息 -->
     <?php
        require_once("header.php");
+       require_once("./menuNav.php")
     ?>
     <!-- 左侧导航 -->
     <div class="container" id="account">
-        <div class="row"> 
-          <div class="col-sm-3 col-xs-12">
+    <div class="row row-offcanvas row-offcanvas-left">
+          
+          <div class="col-sm-3 col-xs-6 sidebar-offcanvas" id="sidebar">
             <?php 
             require_once("personalNav.php");
             ?>
@@ -28,6 +34,9 @@
     </div>
     <!-- 右侧内容 -->
   <div class="col-sm-9 col-xs-12">
+  <p class="pull-left visible-xs">
+  <button type="button" class="btn btn-default btn-sm" data-toggle="offcanvas"><span class="glyphicon glyphicon-pencil"></span></button>
+    </p>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title clearfix">
@@ -114,6 +123,8 @@
 
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./dist/js/index.min.js"></script>
+      <!-- 侧拉菜单 -->
+      <script src="dist/js/sidebar.min.js"></script>
 
 </body>
 </html>
