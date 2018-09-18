@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>realAuth</title>
     <!-- 引入bootstrap核心库 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入编译和压缩后的css文件 -->
     <link rel="stylesheet" href="./dist/css/realAuth.min.css">
+
+    <!-- 验证样式 -->
+    <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.css">
     <!-- 引入jquery -->
     <script src="./lib/jqueryTemplate/jquery.js"></script>
       <!--获取登录用户是否登录-->
@@ -47,19 +50,19 @@
         <p class="warnning">为保护您账户安全，实名认证成功之后不能修改信息，请认真填写！</p>
          <!-- form -->
           
-         <form class="form-horizontal">
+         <form class="form-horizontal" id="AccountInfo" method="post">
           <!-- 用户名 -->
           <div class="form-group">
             <label for="Fname" class="col-sm-3 control-label">用户名</label>
             <div class="col-sm-9" id="Fname">
-            <label for="Fname" class="col-sm-3 control-label FN">小强</label>
+            <label for="Fname" class="col-sm-3 control-label FN" name="username">小强</label>
             </div>
           </div>
           <!-- 姓名 -->
           <div class="form-group">
             <label for="username" class="col-sm-3 control-label">姓&emsp;名</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="username" >
+              <input type="text" class="form-control" name="realname" >
             </div>
           </div>
           <!-- 性别 -->
@@ -67,7 +70,7 @@
             <label for="time" class="col-sm-3 control-label">性&emsp;别</label>
             <div class="col-sm-9">
               <select class="form-control"  name="sex">
-                    <option>男</option>
+                    <option selected>男</option>
                     <option>女</option>
               </select>
             </div>
@@ -77,7 +80,7 @@
             <label for="cardKind" class="col-sm-3 control-label">证件类型</label>
             <div class="col-sm-9">
             <select class="form-control"  name="cardKind">
-                    <option>身份证</option>
+                    <option selected>身份证</option>
                     <option>驾驶证</option>
                     <option>军官证</option>
                 </select>
@@ -111,13 +114,15 @@
             <div class="col-sm-9 clearfix">
               <div class="upload pull-left "id="pic1">
                   <a href="#">上传正面        
-                   <input class="change" type="file"  id="imagefile1"/>
+                   <input class="change" type="file"   id="imagefile1" name="photo1"/>
+                   <span id="img1"></span>
                   </a>
                 
               </div>
               
               <div class="upload pull-left " id="pic2">
-                  <a href="#">上传反面 <input class="change" type="file" id="imagefile2" /></a>
+                  <a href="#">上传反面 <input class="change" type="file" name="photo2" id="imagefile2" />
+                  <span id="img2"></span></a>
               </div>
               <div class="pull-right  temp "><a href="#">查看样板</a></div>
             </div>
@@ -158,8 +163,16 @@
       
         },"json");
       })
+    
 
     </script>
-<script src="./dist/js/showPIC.min.js"></script>
+   
+  <script src="./dist/js/showPIC.min.js"></script>
+  <script src="./lib/bootstrapValidator/js/bootstrapValidator.js"></script>  
+    <!-- 账户信息格式检查 -->
+  <script src="./dist/js/AccountInfoCheck.min.js">
+
+
+</script>
 </body>
 </html>

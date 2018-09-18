@@ -37,7 +37,7 @@
 <script>
   $.get("./api/userState.php",function(data){
     //console.log(data);
-    if(data.isSuccess){
+     if(data.isSuccess){
       var htmls=` <li><a href="#">${data.username}</a></li>
         <li><a href="#">赶快充值</a></li>
         <li><a href="loginOut.php">注销</a></li>`;
@@ -47,7 +47,7 @@
         <li><a href="register.php">快速注册</a></li>
        `;
         $("#homepage").after(htmls);
-    }
+    } 
   },"json")
 </script>
 </body>

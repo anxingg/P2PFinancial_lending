@@ -20,12 +20,12 @@
     </div>
     <div class="col-sm-2 col-xs-6" id="weibo">
       <p>官方微博：</p>
-      <a><img src="./images/tecent.png"></a>
-      <a><img src="./images/sina.png"></a>
+      <a href="#"><img src="./images/tecent.png"></a>
+      <a href="#"><img src="./images/sina.png"></a>
     </div>
     <div class="col-sm-2 col-xs-6" id="weixin">
     <p>官方微信：</p>
-    <a><img src="./images/wx.jpg"></a>
+    <a href="#"><img src="./images/wx.jpg"></a>
     </div>
   </div>
  </div>

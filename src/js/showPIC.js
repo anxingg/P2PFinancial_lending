@@ -9,18 +9,24 @@ $(function() {
 		//createObjectURL创建一个指向该参数对象(图片)的URL
 		var dataURL;
 		dataURL = windowURL.createObjectURL(objUrl);
-   pic1.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100/>'
+		img1.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100 id="pic"/>'
+		var a=$("#pic").attr("src");
+		console.log(a)
+
   });
 
   //反面
   $("#imagefile2").change(function() {
 		var $file = $(this);
 		var objUrl = $file[0].files[0];
-		//获得一个http格式的url路径:mozilla(firefox)||webkit or chrome
+		
 		var windowURL = window.URL || window.webkitURL;
-		//createObjectURL创建一个指向该参数对象(图片)的URL
+	
 		var dataURL;
 		dataURL = windowURL.createObjectURL(objUrl);
-   pic2.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100/>'
+		
+		$("#photo1").val(dataURL);
+		   img2.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100/>'
+		 
 	});
 });

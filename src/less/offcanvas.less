@@ -1,51 +1,35 @@
 @media screen and (max-width: 767px){
-
-    .sidebar-offcanvas {
-        position: absolute;
-         top: 0; 
-        width: 50%;
+//父级
+    .row-offcanvas {
+        position: relative;
+        transition: all 0.5s ease-in-out;
     }
-    .row-offcanvas-left .sidebar-offcanvas {
-       left: -50%;
+    .row-offcanvas-left {
+        left: 0;
     }
-}
-@media (max-width: 767px){
-
-    .visible-xs {
-        display: block!important;
-    }
-}
-@media screen and (max-width: 767px){
 
     .row-offcanvas-left.active {
         left:50%;
         display: block!important;
     }
-}
 
-
-
-@media screen and (max-width: 767px){
-
-    .row-offcanvas-left {
-        left: 0;
+//子左侧导航
+    .sidebar-offcanvas {
+        position: absolute;
+         top: 0; 
+        width: 50%;
+        left: -50%;
+    }
+   
+//右侧内容
+    .visible-xs {
+        display: block!important;
     }
 }
-
-@media screen and (max-width: 767px){
-
-    .row-offcanvas {
-        position: relative;
-      
-        transition: all .25s ease-out;
-    }
-}
-
 .glyphicon-pencil{
     color: #040404;
     font-size: 26px;
-    text-shadow: 0 0 10px #d40000;
-    
+    text-shadow: 0 0 10px #d40000; 
 }
 button[data-toggle="offcanvas"]{
 border:none;
