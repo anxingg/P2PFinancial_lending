@@ -35,8 +35,9 @@
         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
           <div class="panel-body">
           <li><a href="borrow_apply.php">申请借款</a></li>
-          <li><a href="#">借款项目</a></li>
+          <li><a href="borrow_list.php">借款项目</a></li>
           <li><a href="#">还款明细</a></li>
+          <li><a href="borrow_Statistics.php">借款项目总计</a></li>
           </div>
         </div>
   </div>

@@ -10,8 +10,9 @@ $(function() {
 		var dataURL;
 		dataURL = windowURL.createObjectURL(objUrl);
 		img1.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100 id="pic"/>'
-		var a=$("#pic").attr("src");
-		console.log(a)
+		//var a1=$("#pic").attr("src");
+		var a1=$("#imagefile1").val();
+		var b=$("#realpic1").val(a1);
 
   });
 
@@ -26,7 +27,9 @@ $(function() {
 		dataURL = windowURL.createObjectURL(objUrl);
 		
 		$("#photo1").val(dataURL);
-		   img2.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100/>'
-		 
+		   img2.innerHTML='<img src="'+dataURL+'" alt="" width=150 height=100 id="pic02"/>'
+		  // var a2=$("#pic02").attr("src");
+		   var a2=$("#imagefile2").val();
+		   var b2=$("#realpic2").val(a2);
 	});
 });

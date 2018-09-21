@@ -79,7 +79,7 @@
           <div class="form-group">
             <label for="cardKind" class="col-sm-3 control-label">证件类型</label>
             <div class="col-sm-9">
-            <select class="form-control"  name="cardKind">
+            <select class="form-control"  name="idcardkinds">
                     <option selected>身份证</option>
                     <option>驾驶证</option>
                     <option>军官证</option>
@@ -90,7 +90,7 @@
            <div class="form-group">
             <label for="cardNum" class="col-sm-3 control-label">证件号码</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name="cardNum" >
+              <input type="text" class="form-control" name="idcard" >
             </div>
           </div>
            <!-- 出生日期 -->
@@ -116,8 +116,7 @@
                   <a href="#">上传正面        
                    <input class="change" type="file"   id="imagefile1" name="photo1"/>
                    <span id="img1"></span>
-                  </a>
-                
+                  </a>  
               </div>
               
               <div class="upload pull-left " id="pic2">
@@ -127,6 +126,8 @@
               <div class="pull-right  temp "><a href="#">查看样板</a></div>
             </div>
           </div>
+          <input type="hidden" id="realpic1" name="phototop">
+          <input type="hidden" id="realpic2" name="photobottom">
           <!-- 提交 -->
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">

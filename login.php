@@ -102,5 +102,6 @@
      <!-- 验证js -->
      <script src="./lib/bootstrapValidator/js/bootstrapValidator.js"></script>  
     <script src="./dist/js/loginCheck.min.js"></script>
+    
 </body>
 </html>

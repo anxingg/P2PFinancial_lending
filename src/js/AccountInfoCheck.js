@@ -1,4 +1,5 @@
 $(function(){
+    
     $("#AccountInfo").bootstrapValidator({
        
         feedbackIcons: {
@@ -13,14 +14,13 @@ $(function(){
                     notEmpty: {
                         message: '用户名不能为空'
                     },
-                    stringLength: {
-                        min: 6,
-                        max: 15,
-                        message: '用户名在6-15位之间...'
-                    },
+                    regexp:{
+                        regexp:/^[\u4e00-\u9fa5]{2,10}$/,
+                        message: '用户名长度应为2-10位汉字'
+                    }
                 }
             },
-            cardNum: {
+            idcard: {
                 validators: {
                     notEmpty: {
                         message: '证件号码不能为空'
@@ -37,6 +37,10 @@ $(function(){
                     notEmpty: {
                         message: '地址不能为空'
                     },
+                    regexp:{
+                        regexp:/^[\u4e00-\u9fa5]{6,50}$/,
+                        message: '地址长度应为6-50位汉字'
+                    }
                     
                 }
             },
@@ -54,26 +58,13 @@ $(function(){
       
         //使用ajax提交表单的数据
       $.post(URL,data, function(result) {
-          console.log(result);
-          
-           /*  if(result.isSuccess){
-               $("#loginModal").modal('show');
-               $(".loginModalContent").html(`<span class='glyphicon glyphicon-ok green'></span> ${result.msg},等待<span id
-               ='num'>5</span>秒后将跳转到个人中心....`);
-               var num=5;
-               var timer=setInterval(()=>{
-                num--;
-                $("#num").text(num);
-                if(num==0){
-                    clearInterval(timer);
-                    location.href="./personal.php";
-                }
-             },1000);
+          //console.log(result);
+            if(result.isSuccess){
+               alert(result.msg);
+               location.href="index.php"
            }else{
-            $("#loginModal").modal('show');
-        
-               $(".loginModalContent").html("<span class='glyphicon glyphicon-remove red'></span>"+result.msg);
-           }  */
-        }, 'json');   
+            alert(result.msg);
+           }   
+        },'json');   
     });
 })

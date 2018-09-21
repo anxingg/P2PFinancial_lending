@@ -1,4 +1,14 @@
 $(function(){
+    //借款类型
+    var Url=location.href;
+    var type=Url.split("=")[1];
+    $("#borrowType").val(type);
+    //当不是通过链接跳转时type为空
+    if(!type){
+
+        $("#borrowType").val("t1");
+    }
+    //申请格式验证
     $("#borrow-apply").bootstrapValidator({
        
         feedbackIcons: {
@@ -8,7 +18,6 @@ $(function(){
         },
         fields: {
             borrowAmount: {
-             
                 validators: {
                     notEmpty: {
                         message: '借款金额不能为空'
@@ -27,8 +36,8 @@ $(function(){
                     },
                     regexp: {
                     
-                    regexp:/^\d+(\.\d)?\d{0,3}%$/,
-                        message: '小数点后最多四位小数 eg:1.12%'
+                    regexp:/^\d+(\.\d)?\d{0,3}$/,
+                        message: '小数点后最多四位小数 '
                     },
                 }
             }, 
@@ -43,11 +52,11 @@ $(function(){
             borrowTitle: {
                 validators: {
                     notEmpty: {
-                        message: '不能为空'
+                        message: '借款标题不能为空'
                     },
                     regexp:{
-                        regexp:/^[\u4e00-\u9fa5]{8,20}$/,
-                        message: '只能为8-20位汉字'
+                        regexp:/^[\u4e00-\u9fa5]{6,20}$/,
+                        message: '只能为6-20位汉字'
                     }
                 }
             },
@@ -66,9 +75,10 @@ $(function(){
         //使用ajax提交表单的数据
     $.post(URL,data, function(result) {
          if(result.isSuccess){
-            // alert(result.msg);
+            alert(result.msg);
+            location.href="borrow_list.php"
          }else{
-            //alert(result.msg);
+            alert(result.msg);
          }
         }, 'json');   
     });

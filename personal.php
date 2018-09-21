@@ -152,6 +152,7 @@
       $(".username").html(data.username);
      
        },"json");
+       
      })
 
      

@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>borrow</title>
      <!-- bootstrap.css -->
-     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 自定义样式 -->
     <link rel="stylesheet" href="./dist/css/borrow.min.css">
-   
+
+     <!-- jquery.js -->
+    <script src="./lib/jqueryTemplate/jquery.js"></script>
+    <!--获取登录用户是否登录-->
+    <script src="./dist/js/loginState.min.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -30,7 +34,7 @@
                 <p><img src="./images/sequare.png">填写基本资料</p>
                 <p><img src="./images/sequare.png">身份认证</p>
                 <p><img src="./images/sequare.png">视频认证</p>
-                <p><button type="button" class="btn btn-info">立即申请</button></p>
+                <p> <button type="button" class="btn btn-info"><a href="borrow_apply.php?type=t1" >立即申请</a></button></p>
                 </div>
             </div>
         </div>
@@ -45,7 +49,7 @@
                 <p><img src="./images/sequare.png">填写基本资料</p>
                 <p><img src="./images/sequare.png">身份认证</p>
                 <p><img src="./images/sequare.png">视频认证</p>
-                <p><button type="button" class="btn btn-info">立即申请</button></p>
+                <p> <button type="button" class="btn btn-info"><a href="borrow_apply.php?type=t2" >立即申请</a></button></p>
                 </div>
             </div>
         </div>
@@ -60,7 +64,7 @@
                 <p><img src="./images/sequare.png">填写基本资料</p>
                 <p><img src="./images/sequare.png">身份认证</p>
                 <p><img src="./images/sequare.png">视频认证</p>
-                <p><button type="button" class="btn btn-info">立即申请</button></p>
+                <p> <button type="button" class="btn btn-info"><a href="borrow_apply.php?type=t3" >立即申请</a></button></p>
                 </div>
             </div>
         </div>
@@ -71,8 +75,7 @@
     <?php 
      include_once("./footer.php")
      ?>
- <!-- jquery.js -->
- <script src="./lib/jqueryTemplate/jquery.js"></script>
+
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./dist/js/index.min.js"></script>

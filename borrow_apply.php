@@ -58,8 +58,8 @@
                             <label for="inputEmail3" class="col-sm-3 control-label">借款类型</label>
                             <div class="col-sm-9">
                                 <div class="input-group let">
-                                    <select class="form-control " name="borrowType">
-                                        <option value="t1">信用贷</option>
+                                    <select class="form-control " name="borrowType" id="borrowType">
+                                        <option value="t1" >信用贷</option>
                                         <option value="t2">车易贷</option>
                                         <option value="t3">房易贷</option>
                                     </select>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                            <button type="submit" class="btn btn-success">提交申请</button>
+                            <button type="submit" class="btn btn-primary">提交申请</button>
                         
                             </div>
                         </div>
@@ -199,6 +199,7 @@
     <!-- 借款申请信息格式检查 -->
     <script src="./lib/bootstrapValidator/js/bootstrapValidator.js"></script>  
     <!-- 验证申请格式 -->
-    <script src="./dist/js/borrowcheck.min.js"></script>  
+    <script src="./dist/js/borrowcheck.min.js"></script> 
+  
 </body>
 </html>

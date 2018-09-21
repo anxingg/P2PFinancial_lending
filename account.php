@@ -44,9 +44,9 @@
             <img src="./images/head_icon.jpg">
           </div>
             <div class="pull-left personTitle">
-            <p>昵 称：源代码教育</p>
-            <p>用户名：小强</p>
-            <p>最后登录时间：2016-10-25 15:30:10</p>
+            <p id="username"></p>
+            <p id="realname"></p>
+            <p id="lasttime"></p>
             </div>
         </h3>
       </div>
@@ -68,8 +68,8 @@
         </div>
           <!-- sencond-->
           <p class="Rechargebtn">
-            <button type="button" class="btn btn-primary">账户充值</button>
-            <button type="button" class="btn btn-danger">账户提现</button>
+            <button type="button" class="btn btn-primary"><a href="recharge.php">账户充值</a></button>
+            <button type="button" class="btn btn-danger"><a href="#">账户提现</a></button>
           </p>
         <!-- three-->
         <div class="row">
@@ -104,8 +104,7 @@
                     <p>普通用户<a href="#">查看</a></p>
                 </div>
                 <p>VIP会员，让你更快捷的投资</p>
-              </div>
-           
+          </div>
         </div>
       </div>
     </div>
@@ -117,7 +116,6 @@
      <?php
        require_once("footer.php");
     ?>
-
     <!-- 引入jquery -->
     <script src="./lib/jqueryTemplate/jquery.js"></script>
 
@@ -125,6 +123,16 @@
     <script src="./dist/js/index.min.js"></script>
       <!-- 侧拉菜单 -->
       <script src="dist/js/sidebar.min.js"></script>
+<script>
+  $(function(){
 
+    $.get("./api/getuserloginmsg.php",function(data){
+     $("#username").text("昵称：" +data.username);
+     $("#realname").text("用户名：" +data.realname);
+     $("#lasttime").text("最后登录时间：2018-09-20 11:14:37");
+    },"json")
+  })
+
+</script>
 </body>
 </html>

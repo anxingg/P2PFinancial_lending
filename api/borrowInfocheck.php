@@ -24,7 +24,7 @@ if($borrowType=="t3"){
 //echo $borrowType.$borrowAmount.$currentRate.$monthes2Return.$repayment.$minAmount.$rewardAmount.$disableDays.$borrowTitle.$description.$userid;
 require_once("./connDB.php");
 
-$sql="insert into borrowinfo(borrowType,borrowAmount,currentRate,monthes2Return,repayment,minAmount,rewardAmount,disableDays,borrowTitle,description,userid) values('$borrowType','$borrowAmount','$currentRate','$monthes2Return','$repayment','$minAmount','$rewardAmount','$disableDays','$borrowTitle','$description','$userid')";
+$sql="insert into borrowinfo(borrowType,borrowAmount,currentRate,monthes2Return,repayment,minAmount,rewardAmount,disableDays,borrowTitle,description,userid) values('$borrowType',$borrowAmount,$currentRate,$monthes2Return,'$repayment',$minAmount,$rewardAmount,$disableDays,'$borrowTitle','$description',$userid)";
 
 $rst=mysqli_query($conn,$sql);
 

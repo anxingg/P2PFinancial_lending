@@ -9,6 +9,10 @@
      <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 自定义样式 -->
     <link rel="stylesheet" href="./dist/css/inveset.min.css">
+    <link rel="stylesheet" href="./lib/jqueryPagination/jquery.pagination.css">
+    <!-- jquery.js -->
+    <script src="./lib/jqueryTemplate/jquery.js"></script>
+    
    
 </head>
 <body>
@@ -43,29 +47,40 @@
         <td>操作</td>
      </tr>  
   </thead>
-  <tbody>
-      <tr>
-        <td> zs</td>
-        <td class="hideTitle">给我2000度过难关</td>
-        <td>10.00%</td>
-        <td>2,000.00 </td>
-        <td class="hideTitle">按月分期还款</td>
-        <td>78.00%</td>
-        <td><button type="button" class="btn btn-danger">查看</button></td>
-     </tr>    
-  </tbody>
-  </table>
+  <!-- 内容 -->
+  <tbody id="borrowAll"></tbody>
+</table>
+<!-- 分页插件 -->
+    <div id="pagelist">
+        <div id="page" ></div>
+    </div>
 </div>
 
      <!-- footer -->
     <?php 
      include_once("./footer.php")
      ?>
- <!-- jquery.js -->
- <script src="./lib/jqueryTemplate/jquery.js"></script>
+ 
+ <script src="./lib/jqueryTemplate/jqueryTmpl.js"></script>
+<!-- 模板 -->
+ <script id="tmpl" type="text/html">
+    <tr>
+        <td>${username}</td>
+        <td class="hideTitle">${borrowTitle}</td>
+        <td>${currentRate}</td>
+        <td>${borrowAmount} </td>
+        <td class="hideTitle">${repayment}</td>
+        <td>100%</td>
+        <td><button type="button" class="btn btn-danger">查看</button></td>
+     </tr> 
+
+</script>
 <!-- bootstrap.js -->
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-
+<!-- <script src="./dist/js/borrowAll.min.js"></script> -->
 <script src="./dist/js/index.min.js"></script>
+<script src="./lib/jqueryPagination/jquery.pagination-1.2.7.min.js"></script>
+<script src="./lib/jqueryPagination/pagination.js"></script>
+
 </body>
 </html>
